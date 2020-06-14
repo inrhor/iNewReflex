@@ -1,0 +1,238 @@
+blocks:
+  # 方块ID
+  aolige_block:
+    # 方块模型数据 0~189，不可重复
+    modelId: 0
+    # 纹理模型数据
+    customModelData: 50000
+    # 方块名称
+    displayName: "&8奥&f力&8给&7之块"
+    # 方块描述
+    lore:
+      - "&f                                        "
+      - "&e&l大喊奥力给 Nice"
+      - "&f&1&4&6&8&l&r&r&d&0"
+    # 头颅链接
+    headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/8cbf3b415ca331b77a76390c1df7519c7812fe23/head_block/0.png"
+    # 关于块破坏
+    break:
+      # 是否允许破坏
+      enable: true
+      # 块的强度类型
+      # 0 = 易受任何的工具破坏
+      # 1 = 易受斧头类工具破坏
+      # 2 = 易受镐子类工具破坏
+      # 3 = 易受铲子类工具破坏
+      type: 2
+      # 块原始破坏强度，具体看文档
+      strength: 15
+      # 打破后掉落
+      # iNewReflex物品类型:物品ID:数量:概率  掉落物品
+      # exp:数量:概率  给予破坏者经验
+      drop:
+        - "block:aolige_block:1:1"
+        - "exp:1:1"
+    # 关于生成
+    spawn:
+      # 是否可以生成
+      enable: true
+      # 每次生成数量
+      amount: 10
+      # 这个是通过命令生成
+      # 替换目标方块的材料
+      # 替换机制是这样的：
+      # 先对stone类型替换amount值，即两次
+      # 接下来对diamond_block类型替换amount值，也是两次
+      # 为了防止无限循环，请在config.yml设置匹配限度
+      type:
+        - stone
+    # 图鉴说明
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   存在于自然界里的地下"
+      - "&f   挖矿过程会增加发现它的概率"
+      - ""
+  ice_heart_block:
+    modelId: 1
+    customModelData: 50001
+    displayName: "&f冰心素块"
+    lore:
+      - "&f                                        "
+      - "&f   心静则冰心"
+      - "&f&1&4&6&8&l&r&r&d&1"
+    # 头颅链接
+    headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/12fe4e7483e2c4a968241ec2ae27329dc1152b93/head_block/1.png"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   不存在于自然界"
+      - ""
+  crystal_block_blue:
+    modelId: 2
+    customModelData: 50002
+    displayName: "&b蓝晶块"
+    lore:
+      - "&f                                        "
+      - "&f   天然的晶体块"
+      - "&f&1&4&6&8&l&r&r&d&2"
+    # 头颅链接
+    headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/12fe4e7483e2c4a968241ec2ae27329dc1152b93/head_block/2.png"
+    break:
+      enable: true
+      type: 2
+      strength: 5
+      drop:
+        - "material:crystal_blue:3:1"
+        - "exp:1:1"
+    spawn:
+      enable: true
+      amount: 10
+      type:
+        - stone
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   存在于自然界里的地下"
+      - "&f   挖矿过程会增加发现它的概率"
+      - ""
+  crystal_block_green:
+    modelId: 3
+    customModelData: 50003
+    displayName: "&a绿晶块"
+    lore:
+      - "&f                                        "
+      - "&f   天然的晶体块"
+      - "&f&1&4&6&8&l&r&r&d&3"
+    # 头颅链接
+    headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/12fe4e7483e2c4a968241ec2ae27329dc1152b93/head_block/3.png"
+    break:
+      enable: true
+      type: 2
+      strength: 5
+      drop:
+        - "material:crystal_green:3:1"
+        - "exp:1:1"
+    spawn:
+      enable: true
+      amount: 10
+      type:
+        - stone
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   存在于自然界里的地下"
+      - "&f   挖矿过程会增加发现它的概率"
+      - ""
+  crystal_block_pink:
+    modelId: 4
+    customModelData: 50004
+    displayName: "&d粉晶块"
+    lore:
+      - "&f                                        "
+      - "&f   天然的晶体块"
+      - "&f&1&4&6&8&l&r&r&d&4"
+    # 头颅链接
+    headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/12fe4e7483e2c4a968241ec2ae27329dc1152b93/head_block/4.png"
+    break:
+      enable: true
+      type: 2
+      strength: 5
+      drop:
+        - "material:crystal_pink:3:1"
+        - "exp:1:1"
+    spawn:
+      enable: true
+      amount: 10
+      type:
+        - stone
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   存在于自然界里的地下"
+      - "&f   挖矿过程会增加发现它的概率"
+      - ""
+  crystal_block_red:
+    modelId: 5
+    customModelData: 50005
+    displayName: "&c红晶块"
+    lore:
+      - "&f                                        "
+      - "&f   天然的晶体块"
+      - "&f&1&4&6&8&l&r&r&d&5"
+    # 头颅链接
+    headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/12fe4e7483e2c4a968241ec2ae27329dc1152b93/head_block/5.png"
+    break:
+      enable: true
+      type: 2
+      strength: 5
+      drop:
+        - "material:crystal_red:3:1"
+        - "exp:1:1"
+    spawn:
+      enable: true
+      amount: 10
+      type:
+        - stone
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   存在于自然界里的地下"
+      - "&f   挖矿过程会增加发现它的概率"
+      - ""
+  crystal_block_white:
+    modelId: 6
+    customModelData: 50006
+    displayName: "&f白晶块"
+    lore:
+      - "&f                                        "
+      - "&f   天然的晶体块"
+      - "&f&1&4&6&8&l&r&r&d&6"
+    # 头颅链接
+    headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/12fe4e7483e2c4a968241ec2ae27329dc1152b93/head_block/6.png"
+    break:
+      enable: true
+      type: 2
+      strength: 5
+      drop:
+        - "material:crystal_white:3:1"
+        - "exp:1:1"
+    spawn:
+      enable: true
+      amount: 10
+      type:
+        - stone
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   存在于自然界里的地下"
+      - "&f   挖矿过程会增加发现它的概率"
+      - ""
+  crystal_block_yellow:
+    modelId: 7
+    customModelData: 50007
+    displayName: "&e黄晶块"
+    lore:
+      - "&f                                        "
+      - "&f   天然的晶体块"
+      - "&f&1&4&6&8&l&r&r&d&7"
+    # 头颅链接
+    headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/12fe4e7483e2c4a968241ec2ae27329dc1152b93/head_block/7.png"
+    break:
+      enable: true
+      type: 2
+      strength: 5
+      drop:
+        - "material:crystal_yellow:3:1"
+        - "exp:1:1"
+    spawn:
+      enable: true
+      amount: 10
+      type:
+        - stone
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   存在于自然界里的地下"
+      - "&f   挖矿过程会增加发现它的概率"
+      - ""

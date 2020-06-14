@@ -1,0 +1,99 @@
+material:
+  # 物品ID
+  # 不可修改，不可删除，不可添加
+  sunny_doll:
+    # 是否启用
+    enable: true
+    # 物品名称
+    displayName: "&f晴天娃娃"
+    # 物品Lore
+    # @optifine是识别物品NBT显示纹理，不使用OptiFine的可删除
+    lore:
+      - "@optifine"
+      - "&7   一种挂在屋檐祈求天气放晴的布偶"
+      - "&7   晴天娃娃，晴天娃娃，但愿明天是个好天气"
+      - "&f                                        "
+    # 图鉴说明
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   合成它，你将获得一份幸运"
+      - ""
+  crystal_blue:
+    enable: true
+    displayName: "&b蓝水晶"
+    lore:
+      - "@optifine"
+      - "&7   天然水晶虽然没有钻石来得价值高"
+      - "&7   但也是璀璨闪亮,受人喜爱"
+      - "&f                                        "
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   在自然界里的地下找到并挖掉蓝晶块"
+      - ""
+  crystal_green:
+    enable: true
+    displayName: "&a绿水晶"
+    lore:
+      - "@optifine"
+      - "&7   天然水晶虽然没有钻石来得价值高"
+      - "&7   但也是璀璨闪亮,受人喜爱"
+      - "&f                                        "
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   在自然界里的地下找到并挖掉绿晶块"
+      - ""
+  crystal_pink:
+    enable: true
+    displayName: "&d粉水晶"
+    lore:
+      - "@optifine"
+      - "&7   天然水晶虽然没有钻石来得价值高"
+      - "&7   但也是璀璨闪亮,受人喜爱"
+      - "&f                                        "
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   在自然界里的地下找到并挖掉粉晶块"
+      - ""
+  crystal_red:
+    enable: true
+    displayName: "&c红水晶"
+    lore:
+      - "@optifine"
+      - "&7   天然水晶虽然没有钻石来得价值高"
+      - "&7   但也是璀璨闪亮,受人喜爱"
+      - "&f                                        "
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   在自然界里的地下找到并挖掉红晶块"
+      - ""
+  crystal_white:
+    enable: true
+    displayName: "&f白水晶"
+    lore:
+      - "@optifine"
+      - "&7   天然水晶虽然没有钻石来得价值高"
+      - "&7   但也是璀璨闪亮,受人喜爱"
+      - "&f                                        "
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   在自然界里的地下找到并挖掉白晶块"
+      - ""
+  crystal_yellow:
+    enable: true
+    displayName: "&e黄水晶"
+    lore:
+      - "@optifine"
+      - "&7   天然水晶虽然没有钻石来得价值高"
+      - "&7   但也是璀璨闪亮,受人喜爱"
+      - "&f                                        "
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   在自然界里的地下找到并挖掉黄晶块"
+      - ""

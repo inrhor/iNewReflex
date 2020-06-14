@@ -1,0 +1,1026 @@
+food:
+  # 物品ID
+  # 不可修改，不可删除，不可添加
+  red_apple:
+    # 是否启用
+    enable: true
+    # 物品名称
+    displayName: "&c红苹果"
+    # 物品Lore
+    # @optifine是识别物品NBT显示纹理，不使用OptiFine的可删除
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    # 食用后增加饥饿值数
+    addFood: 2
+    # 关于农作物
+    crop:
+      # 是否可以种植
+      canPlace: true
+      # 头颅图片
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/59c2aea945c8c5bde6fc4db6ce8be2414dfbc055/head_food/apple.png"
+      # 可种植的方块材料
+      material:
+        - oak_leaves
+        - spruce_leaves
+        - birch_leaves
+        - jungle_leaves
+        - acacia_leaves
+        - dark_oak_leaves
+      # 可种植在方块哪一面
+      # NORTH EAST SOUTH WEST UP DOWN ALL
+      face: down
+      # 生长数值
+      growthAddValue: 1
+      # 生长的成熟值
+      growthRipe: 100
+      # 关于收割
+      harvest:
+        # 最大收割进度
+        maxValue: 10
+      # 收获奖励，支持多个
+      rewards:
+        - "food:red_apple:2:1"
+        - "exp:10:1"
+      # 显示生长状况
+      show:
+        # 可选 hd tr
+        use: hd
+        # 显示时长
+        time: 3
+        # TrHologram
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &a红苹果'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        # HolographicDisplays
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &a红苹果'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    # 图鉴说明
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7各种树枝的下面"
+      - "&f     生长的成熟值： &7100"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&710 100%"
+      - "&f       收获 &c红苹果 &a+&72 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  blueberry:
+    enable: true
+    displayName: "&3蓝莓"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 2
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/e034bbf3fb9fa1c950e914d51997b05543a469ae/head_food/blueberry.png"
+      material:
+        - oak_leaves
+        - spruce_leaves
+        - birch_leaves
+        - jungle_leaves
+        - acacia_leaves
+        - dark_oak_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 120
+      harvest:
+        maxValue: 12
+      rewards:
+        - "food:blueberry:2:1"
+        - "exp:18:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &3蓝莓'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &3蓝莓'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7各种树枝的下面"
+      - "&f     生长的成熟值： &7120"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&718 100%"
+      - "&f       收获 &3蓝莓 &a+&72 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  cabbage:
+    enable: true
+    displayName: "&a卷心菜"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 3
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/cabbage.png"
+      material:
+        - farmland
+      face: up
+      growthAddValue: 1
+      growthRipe: 211
+      harvest:
+        maxValue: 18
+      rewards:
+        - "food:cabbage:2:1"
+        - "exp:40:0.8"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &a卷心菜'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &a卷心菜'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在土地，有时候埋藏在草地中"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7已耕地的泥土上"
+      - "&f     生长的成熟值： &7211"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&740 80%"
+      - "&f       收获 &a卷心菜 &a+&72 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  cherry:
+    enable: true
+    displayName: "&d樱桃"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 1
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/cherry.png"
+      material:
+        - spruce_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 96
+      harvest:
+        maxValue: 8
+      rewards:
+        - "food:cherry:3:1"
+        - "exp:5:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &d樱桃'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &d樱桃'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在云杉树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7云杉树叶的下面"
+      - "&f     生长的成熟值： &796"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&75 100%"
+      - "&f       收获 &d樱桃 &a+&73 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  grape_blue:
+    enable: true
+    displayName: "&3蓝葡萄"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 1
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/grape_blue.png"
+      material:
+        - vine
+      face: all
+      growthAddValue: 1
+      growthRipe: 50
+      harvest:
+        maxValue: 5
+      rewards:
+        - "food:grape_blue:5:0.9"
+        - "exp:1:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &3蓝葡萄'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &3蓝葡萄'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在藤蔓"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7藤蔓"
+      - "&f     生长的成熟值： &750"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&71 100%"
+      - "&f       收获 &3蓝葡萄 &a+&75 90%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  grape_pink:
+    enable: true
+    displayName: "&d粉葡萄"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 1
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/grape_pink.png"
+      material:
+        - vine
+      face: all
+      growthAddValue: 1
+      growthRipe: 50
+      harvest:
+        maxValue: 5
+      rewards:
+        - "food:grape_pink:5:0.8"
+        - "exp:2:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &d粉葡萄'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &d粉葡萄'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在藤蔓"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7藤蔓"
+      - "&f     生长的成熟值： &750"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&72 100%"
+      - "&f       收获 &d粉葡萄 &a+&75 80%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  grape_purple:
+    enable: true
+    displayName: "&5紫葡萄"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 1
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/grape_purple.png"
+      material:
+        - vine
+      face: all
+      growthAddValue: 1
+      growthRipe: 50
+      harvest:
+        maxValue: 5
+      rewards:
+        - "food:grape_purple:5:0.9"
+        - "exp:1:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &5紫葡萄'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &5紫葡萄'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在藤蔓"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7藤蔓"
+      - "&f     生长的成熟值： &750"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&71 100%"
+      - "&f       收获 &5紫葡萄 &a+&75 90%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  lemon:
+    enable: true
+    displayName: "&e柠檬"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 2
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/lemon.png"
+      material:
+        - oak_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 131
+      harvest:
+        maxValue: 10
+      rewards:
+        - "food:lemon:1:1"
+        - "exp:16:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &e柠檬'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &e柠檬'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在橡树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7橡树叶下"
+      - "&f     生长的成熟值： &7131"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&716 100%"
+      - "&f       收获 &e柠檬 &a+&71 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  mango:
+    enable: true
+    displayName: "&6芒果"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 3
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/mango.png"
+      material:
+        - birch_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 140
+      harvest:
+        maxValue: 10
+      rewards:
+        - "food:mango:1:08"
+        - "exp:31:0.6"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &6芒果'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &6芒果'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在白桦树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7白桦叶下"
+      - "&f     生长的成熟值： &7140"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&731 60%"
+      - "&f       收获 &e柠檬 &a+&71 80%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  mangosteen:
+    enable: true
+    displayName: "&9山竹"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 3
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/mangosteen.png"
+      material:
+        - jungle_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 426
+      harvest:
+        maxValue: 21
+      rewards:
+        - "food:mangosteen:1:05"
+        - "exp:110:0.5"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &9山竹'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &9山竹'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在丛树树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7丛树叶下"
+      - "&f     生长的成熟值： &7426"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&7110 50%"
+      - "&f       收获 &9山竹 &a+&71 50%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  orange:
+    enable: true
+    displayName: "&6橙子"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 2
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/orange.png"
+      material:
+        - oak_leaves
+        - spruce_leaves
+        - birch_leaves
+        - jungle_leaves
+        - acacia_leaves
+        - dark_oak_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 100
+      harvest:
+        maxValue: 10
+      rewards:
+        - "food:orange:3:1"
+        - "exp:1:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &6橙子'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &6橙子'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7各种树枝的下面"
+      - "&f     生长的成熟值： &7100"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&71 100%"
+      - "&f       收获 &6橙子 &a+&73 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  peach:
+    enable: true
+    displayName: "&d桃子"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 2
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/peach.png"
+      material:
+        - oak_leaves
+        - spruce_leaves
+        - birch_leaves
+        - jungle_leaves
+        - acacia_leaves
+        - dark_oak_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 107
+      harvest:
+        maxValue: 10
+      rewards:
+        - "food:peach:1:0.8"
+        - "exp:21:0.8"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &d桃子'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &d桃子'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7各种树枝的下面"
+      - "&f     生长的成熟值： &7107"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&721 80%"
+      - "&f       收获 &d桃子 &a+&71 80%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  pear:
+    enable: true
+    displayName: "&e梨"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 2
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/pear.png"
+      material:
+        - oak_leaves
+        - spruce_leaves
+        - birch_leaves
+        - jungle_leaves
+        - acacia_leaves
+        - dark_oak_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 100
+      harvest:
+        maxValue: 10
+      rewards:
+        - "food:pear:3:1"
+        - "exp:1:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &e梨'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &e梨'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7各种树枝的下面"
+      - "&f     生长的成熟值： &7100"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&71 100%"
+      - "&f       收获 &e梨 &a+&73 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  pineapple:
+    enable: true
+    displayName: "&e菠萝"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 2
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/pineapple.png"
+      material:
+        - sand
+      face: up
+      growthAddValue: 1
+      growthRipe: 360
+      harvest:
+        maxValue: 15
+      rewards:
+        - "food:pineapple:1:1"
+        - "exp:17:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &e菠萝'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &e菠萝'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   合适生长于干燥环境，有时候埋藏在沙子里"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7沙子上"
+      - "&f     生长的成熟值： &7360"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&717 100%"
+      - "&f       收获 &e菠萝 &a+&71 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  pitaya:
+    enable: true
+    displayName: "&c火龙果"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 3
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/pitaya.png"
+      material:
+        - oak_leaves
+      face: down
+      growthAddValue: 1
+      growthRipe: 131
+      harvest:
+        maxValue: 10
+      rewards:
+        - "food:pitaya:1:1"
+        - "exp:16:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: -1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &c火龙果'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 0
+          z: 0.5
+          textList:
+            - '&f农作物： &c火龙果'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在橡树上，你可以爬树找到它"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7橡树叶下"
+      - "&f     生长的成熟值： &7130"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&716 100%"
+      - "&f       收获 &c火龙果 &a+&71 100%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""
+  strawberry:
+    enable: true
+    displayName: "&c草莓"
+    lore:
+      - "@optifine"
+      - "@food_tag"
+      - "@food_addFood"
+      - "&f                                        "
+    addFood: 1
+    crop:
+      canPlace: true
+      headUrl: "https://inrhinrh.coding.net/p/tuchuang/d/tuchuang/git/raw/7c752a26da005a69d66227f6158a7f4042000102/head_food/strawberry.png"
+      material:
+        - farmland
+      face: up
+      growthAddValue: 1
+      growthRipe: 101
+      harvest:
+        maxValue: 18
+      rewards:
+        - "food:cabbage:3:0.95"
+        - "exp:1:1"
+      show:
+        use: hd
+        time: 3
+        tr:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &c草莓'
+            - "&f生长数值： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+        hd:
+          x: 0.5
+          y: 1.5
+          z: 0.5
+          textList:
+            - '&f农作物： &c草莓'
+            - "&f生长状况： @inewrx_cropNowGrowth &7/ &f@inewrx_cropMaxGrowth"
+            - "&f生长状况： @inewrx_cropRipe"
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   生长在土地，有时候埋藏在草地中"
+      - "&f   它的作用还可以用于种植，获得更好的收获"
+      - ""
+      - "&3&l   种植系统"
+      - "&f     可种植否： &a可以"
+      - "&f     种植位置： &7已耕地的泥土上"
+      - "&f     生长的成熟值： &7211"
+      - "&f     生长数值： &7每一分钟增加 &61 &7生长数值"
+      - "&f     丰收"
+      - "&f       经验 &a+&71 100%"
+      - "&f       收获 &c草莓 &a+&73 95%"
+      - ""
+      - "&3&l   种植操作"
+      - "&f     左键收割农作物"
+      - "&f     右键农作物查看生长状况"
+      - "&f     在允许种植的地方右键即可种植"
+      - ""

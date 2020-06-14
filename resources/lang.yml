@@ -1,0 +1,130 @@
+COMMAND_CONSOLE:
+  - "&c不可以在控制台使用该命令"
+COMMAND_RELOAD:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &a已重载配置"
+  - "&f"
+RANDOM_SPAWN_BLOCK_IS_OLD_VERSION:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c该功能仅支持Minecraft-1.14+版本"
+  - "&f"
+COMMAND_HELP:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &a&l命令帮助"
+  - "&f      /inewrx help   &7# 查看命令帮助"
+  - "&f      /inewrx give <类型> <ID> <玩家> [数量]   &7# 给予物品"
+  - "&f      /inewrx blockspawn <半径X> <半径Y> <半径Z>   &7# 向所在世界生成拓展方块"
+  - "&f      /inewrx openPanel <合成面板ID> [玩家]   &7# 打开合成系统"
+  - "&f      /inewrx viewRecipe <合成面板ID> <配方ID> [玩家]   &7# 查看配方公式"
+  - "&f      /inewrx addRecipe <合成面板ID> <配方ID>   &7# 添加合成配方"
+  - "&f      /inewrx editRecipe <合成面板ID> <配方ID>   &7# 编辑合成配方"
+  - "&f      /inewrx delRecipe <合成面板ID> <配方ID>   &7# 删除合成配方"
+  - "&f      /inewrx reload   &7# 重载配置"
+  - "&f"
+COMMAND_GIVE_ERROR_FORMAT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c&l正确格式"
+  - "&f      /inewrx give <类型> <ID> <玩家> [数量]   &7# 给予物品"
+  - "&f"
+COMMAND_NO_PERMISSION:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c没有足够的权限使用"
+  - "&f"
+NOT_INT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c请填写正整数"
+  - "&f"
+ID_NOT_EXIST:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c该ID不存在"
+  - "&f"
+TYPE_NOT_EXIST:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c可选类型：&fblock"
+  - "&f"
+SUCCESSFULLY_GIVE:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &a成功给予 &f@target &a物品 &f@itemName &fx@amount"
+  - "&f"
+PLAYER_NOT_ONLINE:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c目标玩家不在线"
+  - "&f"
+
+PANEL_NOT_EXIST:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c该合成面板不存在"
+  - "&f"
+RECIPE_NOT_EXIST:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c该配方不存在"
+  - "&f"
+RECIPE_EXISTED:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c该配方已存在"
+  - "&f"
+RECIPE_SUCCESSFULLY_DEL:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &a配方已删除"
+  - "&f"
+RECIPE_SUCCESSFULLY_EDIT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &a配方修改成功"
+  - "&f"
+OPEN_WRONG_FORMAT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c&l正确格式"
+  - "&f      /inewrx openPanel <合成面板ID> [玩家]   &7# 打开合成系统"
+  - "&f"
+VIEW_WRONG_FORMAT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c&l正确格式"
+  - "&f      /inewrx viewRecipe <合成面板ID> <配方ID> [玩家]   &7# 查看配方公式"
+  - "&f"
+ADD_WRONG_FORMAT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c&l正确格式"
+  - "&f      /inewrx addRecipe <合成面板ID> <配方ID>   &7# 添加合成配方"
+  - "&f"
+DEL_WRONG_FORMAT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c&l正确格式"
+  - "&f      /inewrx delRecipe <合成面板ID> <配方ID>   &7# 删除合成配方"
+  - "&f"
+EDIT_WRONG_FORMAT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c&l正确格式"
+  - "&f      /inewrx editRecipe <合成面板ID> <配方ID>   &7# 编辑合成配方"
+  - "&f"
+
+COMMAND_SPAWN_BLOCK:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &a已开始向所在的世界生成拓展方块"
+  - "&f"
+BLOCK_SPAWN_WRONG_FORMAT:
+  - "&f"
+  - "&f   &7&l[&6&liNewReflex&7&l]"
+  - "&f   &c&l正确格式"
+  - "&f      /inewrx blockspawn <半径X> <半径Y> <半径Z>   &7# 向所在世界生成拓展方块"
+  - "&f"

@@ -1,0 +1,25 @@
+guideHomeTitle: "&l指南书 - 主页"
+guideTypeTitle: "&l指南书 - 拓展物品图鉴 - 类型"
+guideTypeWeaponTitle: "&l指南书 - 拓展物品图鉴 - 武器"
+guideTypeToolTitle: "&l指南书 - 拓展物品图鉴 - 工具"
+guideTypeMaterialTitle: "&l指南书 - 拓展物品图鉴 - 装饰材料"
+guideTypeBlockTitle: "&l指南书 - 拓展物品图鉴 - 方块"
+guideTypeFoodTitle: "&l指南书 - 拓展物品图鉴 - 食物"
+guideTypeMobsTitle: "&l指南书 - 生物图鉴"
+
+guideItemShowTitle: "&l拓展物品图鉴 - §r"
+
+guideItem: "&7&l[&f 拓展物品图鉴 &7&l]"
+guideMob: "&7&l[&f 拓展生物图鉴 &7&l]"
+
+guideTypeWeapon: "&7&l[&f 武器 &7&l]"
+guideTypeTool: "&7&l[&f 工具 &7&l]"
+guideTypeMaterial: "&7&l[&f 装饰材料 &7&l]"
+guideTypeBlock: "&7&l[&f 方块 &7&l]"
+guideTypeFood: "&7&l[&f 食物 &7&l]"
+
+empty: "&7&l[&c 暂无 &7&l]"
+close: "&7&l[&c 关闭 &7&l]"
+previousPage: "&7&l[&f 上一页 &7&l]"
+nextPage: "&7&l[&f 下一页 &7&l]"
+viewRecipe: "&7&l[&f 查看合成配方 &7&l]"

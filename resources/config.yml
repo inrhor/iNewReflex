@@ -1,0 +1,201 @@
+# 启用功能
+# Enable feature
+features:
+  # 生物 需要 imiPet & MythicMobs
+  mythicMobs: true
+  # 方块 允许启用版本：Minecraft-1.14+
+  block: true
+  # 武器
+  weapon: true
+  # 工具
+  tool: true
+  # 装饰材料
+  material: true
+  # 食物
+  food: true
+
+# 属性
+attribute:
+  tag: '&f   &7&L[&3&l 战斗属性 &7&l]'
+  # tag: "&f   &7&L[&3&l Attribute &7&l]"
+  damage: '&f      &k|&f  攻击伤害： &7'
+  # damage: "&f      &k|&f  AttackDamage： &7"
+  attackSpeed: '&f      &k|&f  攻击速度： &7'
+  # attackSpeed: "&f      &k|&f  AttackSpeed： &7"
+
+# 食物
+food:
+  tag: '&f   &7&L[&3&l 食物属性 &7&l]'
+  # tag: "&f   &7&L[&3&l Food Attribute &7&l]"
+  addFood: '&f      &k|&f  补充饥饿值： &7'
+  #addFood: '&f      &k|&f  AddFood： &7'
+
+# 农作物系统
+# Crop System
+crop:
+  # 是否启用，需要BlockStore插件
+  # need BlockStore plugin
+  enable: true
+  # 防止非正常关服时未存储
+  # 存储周期，秒
+  # Prevent non-save during abnormal shutdown
+  # Save period, seconds
+  saveTime: 300
+  # 新增生长值的周期时间，秒
+  # New growth value cycle time, seconds
+  growthTime: 60
+  # 生长标志
+  # Growth sign
+  ripeTag: "&a已成熟"
+  notRipeTag: "&c未成熟"
+  # 点击收割时的标志
+  # Click on the tag at harvest
+  harvestTag: "&a收割进度  "
+  # 点击收割时的信息
+  # Click on the information at harvest
+  harvest:
+    - "@inewrx_harvest"
+  # 玩家破坏何种材料掉落有关农作物
+  # 更新插件的同时，请手动更新此处
+  # What kind of materials are destroyed by the player
+  # Please update here manually while updating the plugin
+  conditions:
+    # 材料
+    # 同一种物品越多代表概率越大
+    # 第一个数字是数量
+    # 第二个数字是概率，0~1
+    # 即 食物ID:数量:概率
+    # Material
+    # More items of the same kind means greater probability
+    # The first number is the quantity
+    # The second number is probability, 0 ~ 1
+    # Example foodID:amount:chance
+    oak_leaves:
+      - "red_apple:1:0.05"
+      - "red_apple:1:0.05"
+      - "blueberry:1:0.04"
+      - "lemon:1:0.04"
+      - "peach:1:0.04"
+      - "pear:1:0.05"
+      - "pitaya:1:0.03"
+    spruce_leaves:
+      - "red_apple:1:0.05"
+      - "blueberry:1:0.04"
+      - "cherry:1:0.04"
+      - "peach:1:0.04"
+      - "pear:1:0.05"
+    jungle_leaves:
+      - "red_apple:1:0.05"
+      - "blueberry:1:0.04"
+      - "peach:1:0.04"
+      - "pear:1:0.05"
+    acacia_leaves:
+      - "red_apple:1:0.05"
+      - "blueberry:1:0.04"
+      - "peach:1:0.04"
+      - "pear:1:0.05"
+    dark_oak_leaves:
+      - "red_apple:1:0.05"
+      - "blueberry:1:0.04"
+      - "peach:1:0.04"
+      - "pear:1:0.05"
+    birch_leaves:
+      - "red_apple:1:0.05"
+      - "blueberry:1:0.04"
+      - "mango:1:0.04"
+      - "peach:1:0.04"
+      - "pear:1:0.05"
+    grass_block:
+      - "cabbage:1:0.02"
+      - "strawberry:1:0.05"
+    vine:
+      - "grape_blue:1:0.05"
+      - "grape_pink:1:0.05"
+      - "grape_purple:1:0.05"
+    sand:
+      - "pineapple:1:0.04"
+
+# 耐久性
+durability:
+  tag: '&r   '
+
+# 关于生成拓展方块
+# Random spawn custom block
+randomSpawnBlock:
+  # 匹配替换限度，建议不要太大，防止阻塞
+  # Match replacement limit, it is recommended not to be too large
+  # Prevent blocking threads
+  findMax: 10
+  # 是否向后台输出生成拓展方块的位置
+  # 匹配不到的方块不会被输出
+  # Whether to spawn custom block location in console output
+  # Blocks that fail to match will not be output
+  debug: false
+  # 自然生成
+  # Natural spawn custom block
+  naturalSpawn:
+    # 是否启用自然生成拓展方块
+    # Enable natural spawn custom block
+    enable: true
+    # 触发自然生成条件
+    # material 破坏该方块触发
+    # Natural spawn conditions
+    # material Break the block to trigger
+    conditions:
+      - 'material:iron_ore'
+      - 'material:lapis_ore'
+      - 'material:coal_ore'
+    # 以这个触发者为中心的半径
+    # The radius around this player
+    radiusX: 150
+    radiusY: 150
+    radiusZ: 150
+    # 启用的世界
+    # Enable world
+    enableWorld:
+      - 'zyworld'
+
+# 合成系统
+iCraft:
+  # 设置
+  # setting
+  setting:
+    # 如果是false，右键工作台时打开自定义矩阵合成系统
+    # if false, open custom crafting system
+    # when right click crafting-table
+    # 如果是true，右键工作台时打开原版合成系统-自定义矩阵合成系统选择界面
+    # if true, open vanilla Gui-custom crafting system select Gui
+    # when right click crafting-table
+    default: true
+    # 如果打开新型合成系统
+    # 打开的GUI的合成面板ID
+    # if open custom crafting system
+    # open the gui id custom crafting system
+    gui: inewrx
+  # 关于合成系统菜单
+  # about custom crafting system
+  inventory:
+    # 合成系统标题
+    # inventory title
+    #title: '&lcrafting system'
+    title: '&l合成系统'
+    # 点击合成按钮的名称
+    # click on the name of the composition button
+    #button: '&7&l[&acomposition&7&l]'
+    button: '&7&l[&a 点击合成 &7&l]'
+    # 关闭按钮的名称
+    # click on the name of the close button
+    #close: '&7&l[&cclose&7&l]'
+    close: '&7&l[&c 关闭 &7&l]'
+    # 返回键
+    # Back button
+    #back: '&7&l[&fback&7&l]'
+    back: '&7&l[&f 返回 &7&l]'
+  # 关于选择界面 About selection Gui
+  selectGui:
+    #title: "&lPlease select Crafting System"
+    title: '&l请选择合成系统'
+    #vanillaGuiButton: "&7&l[&aVanilla Crafting Gui&7&l]"
+    vanillaGuiButton: '&7&l[&a原版合成系统&7&l]'
+    #newGuiButton: "&7&l[&aNew Crafting Gui&7&l]"
+    newGuiButton: '&7&l[&a新型合成系统&7&l]'

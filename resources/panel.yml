@@ -1,0 +1,67 @@
+# 合成面板ID Minecraft-1.13+
+# Gui ID Minecraft-1.13+
+inewrx:
+  # Crafting System Matrix
+  # 放置所需合成物品的槽位 Slot for the desired synthetic item
+  # 0是第一格，1是第二格，以此推类 0 is the first cell, 1 is the second cell, and so on
+  matrix:
+    - 10
+    - 11
+    - 12
+    - 13
+    - 19
+    - 20
+    - 21
+    - 22
+    - 28
+    - 29
+    - 30
+    - 31
+    - 37
+    - 38
+    - 39
+    - 40
+  # 合成按钮的槽位 Slot for composite button
+  buttonSlots:
+    - 16
+  # 合成结果的槽位 Slot of composite result
+  resultSlots:
+    - 25
+  # 关闭按钮的槽位 Slot of close result
+  closeSlots:
+    - 43
+  # 返回键的槽位 Slot of back button
+  backSlots:
+    - 34
+# 合成面板ID Minecraft-1.9-1.12
+# Gui ID Minecraft-1.9-1.12
+inewrxold:
+  # Crafting System Matrix
+  # 放置所需合成物品的槽位 Slot for the desired synthetic item
+  # 0是第一格，1是第二格，以此推类 0 is the first cell, 1 is the second cell, and so on
+  matrix:
+    - 10
+    - 11
+    - 12
+    - 13
+    - 19
+    - 20
+    - 21
+    - 22
+    - 28
+    - 29
+    - 30
+    - 31
+    - 37
+    - 38
+    - 39
+    - 40
+  # 合成按钮的槽位 Slot for composite button
+  buttonSlots:
+    - 16
+  # 合成结果的槽位 Slot of composite result
+  resultSlots:
+    - 25
+  # 关闭按钮的槽位 Slot of close result
+  closeSlots:
+    - 43

@@ -1,0 +1,48 @@
+# 生物图鉴系统
+mobsBook:
+  # 是否启用
+  enable: true
+  # 发现与未发现标志
+  fineTag:
+    notFine: "&c未发现"
+    isFine: "&a已发现"
+  # 以弹幕方式告知玩家
+  msg:
+    # 是否启用
+    enable: true
+    # 第一行
+    mainMsg: "&a发现新生物"
+    # 第二行
+    subMsg: "&f@inewrx_mobName"
+    # 停留时间秒
+    stayTime: 5
+  # 当玩家发现新生物后会给定权限：inewrx.mobsbook.angle
+  list:
+    # 模型ID，另外，生物模型ID不支持冒号 :
+    # 模型ID的请具体看imiPet
+    angle:
+      # 生物名称
+      name: "&l天使"
+      # 物品名称
+      itemName: "&r&r&r&5&9&4&9&2&3&1&a&1&1"
+      # 说明
+      itemLore:
+        - "&f   &7&L[&3&l 维基 &7&l]"
+        - ""
+        - "&f   一般会在白天里游走"
+        - ""
+        - "&3&l   发现后奖励"
+        - "&f       经验 &a+&730"
+        - ""
+        - "&3&l   状态： @inewrx_mobsFind"
+        - "&f                                        "
+      # 模型数据
+      customModelData: "10010001"
+      # 发现新生物后给定的奖励
+      # 支持以下格式
+      # 后台执行 console:参数
+      # 以OP身份执行 command_op:参数
+      # 经验 exp:数量
+      script:
+        - "console:lp user @player perm set inewrx.mobsbook.angle"
+        - "exp:30"

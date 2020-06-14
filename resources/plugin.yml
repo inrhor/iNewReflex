@@ -1,0 +1,16 @@
+name: iNewReflex
+main: cn.mcres.iNewReflex.INewReflex
+version: "1.5.3"
+api-version: "1.13"
+authors:
+  - inrhor
+softdepend:
+  - imiPet
+  - MythicMobs
+  - ProtocolLib
+  - BlockStore
+  - Residence
+commands:
+  inewrx:
+    description: inewreflex command
+    usage: /<command>

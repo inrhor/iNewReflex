@@ -1,0 +1,488 @@
+weapon:
+  # 物品ID
+  # 不可修改，不可删除，不可添加
+  emerald_sword:
+    # 是否启用
+    enable: true
+    # 物品名称
+    displayName: "&a翡翠剑"
+    # 物品Lore
+    # @optifine是识别物品NBT显示纹理，不使用OptiFine的可删除
+    # @attribute是显示本插件的属性系统，不想显示的可删除
+    # @durability是显示本插件的耐久性系统，仅这行不可修改，若不想显示的可删除
+    # @durability_tag可在config中添加字符
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    # 攻击伤害
+    attackDamage: 9
+    # 攻击速度
+    attackSpeed: -0.8
+    # 耐久性
+    durability:
+      # 是否有耐久性
+      enable: true
+      # 耐久性的值
+      value: 331
+    # 图鉴说明
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   只要绿宝石和钻石剑就可以合成它"
+      - ""
+  obsidian_sword:
+    enable: true
+    displayName: "&7黑曜之剑"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 9
+    attackSpeed: 0
+    durability:
+      enable: true
+      value: 846
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   只要下界之星和钻石剑就可以合成它"
+      - ""
+  lightsaber_blue:
+    enable: true
+    displayName: "&b蓝-激光剑"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 16
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 214
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   你需要在&a自然界"
+      - "&f   里找到蓝晶块，并挖掉它得到"
+      - "&f   蓝水晶，然后还需要钻石剑"
+      - ""
+  lightsaber_red:
+    enable: true
+    displayName: "&c红-激光剑"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 16
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 214
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   你需要在&a自然界"
+      - "&f   里找到黄晶块，并挖掉它得到"
+      - "&f   黄水晶，然后还需要钻石剑"
+      - ""
+  lightsaber_green:
+    enable: true
+    displayName: "&a绿-激光剑"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 16
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 214
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   你需要在&a自然界"
+      - "&f   里找到绿晶块，并挖掉它得到"
+      - "&f   绿水晶，然后还需要钻石剑"
+      - ""
+  lightsaber_yellow:
+    enable: true
+    displayName: "&e黄-激光剑"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 16
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 214
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   你需要在&a自然界里"
+      - "&f   里找到黄晶块，并挖掉它得到"
+      - "&f   黄水晶，然后还需要钻石剑"
+      - ""
+  lightsaber_white:
+    enable: true
+    displayName: "&f白-激光剑"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 16
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 214
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   你需要在&a自然界"
+      - "&f   里找到白晶块，并挖掉它得到"
+      - "&f   白水晶，然后还需要钻石剑"
+      - ""
+  umbrella_blue:
+    enable: true
+    displayName: "&b蓝雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.9
+    durability:
+      enable: true
+      value: 317
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   蓝色羊毛，绳子，木棍，精修而成"
+      - ""
+  umbrella_green:
+    enable: true
+    displayName: "&a绿雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.9
+    durability:
+      enable: true
+      value: 317
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   绿色羊毛，绳子，木棍，精修而成"
+      - ""
+  umbrella_pink:
+    enable: true
+    displayName: "&d粉雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.9
+    durability:
+      enable: true
+      value: 317
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   粉色羊毛，绳子，木棍，精修而成"
+      - ""
+  umbrella_red:
+    enable: true
+    displayName: "&c红雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.9
+    durability:
+      enable: true
+      value: 317
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   红色羊毛，绳子，木棍，精修而成"
+      - ""
+  umbrella_white:
+    enable: true
+    displayName: "&f白雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.9
+    durability:
+      enable: true
+      value: 317
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   白色羊毛，绳子，木棍，精修而成"
+      - ""
+  umbrella_yellow:
+    enable: true
+    displayName: "&e黄雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.9
+    durability:
+      enable: true
+      value: 317
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   黄色羊毛，绳子，木棍，精修而成"
+      - ""
+  umbrella_blue_sunny_doll:
+    enable: true
+    displayName: "&f晴天娃娃&b蓝雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 480
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   把精心制作一只晴天娃娃挂在伞角吧"
+      - ""
+  umbrella_green_sunny_doll:
+    enable: true
+    displayName: "&f晴天娃娃&a绿雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 480
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   把精心制作一只晴天娃娃挂在伞角吧"
+      - ""
+  umbrella_pink_sunny_doll:
+    enable: true
+    displayName: "&f晴天娃娃&d粉雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 480
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   把精心制作一只晴天娃娃挂在伞角吧"
+      - ""
+  umbrella_red_sunny_doll:
+    enable: true
+    displayName: "&f晴天娃娃&c红雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 480
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   把精心制作一只晴天娃娃挂在伞角吧"
+      - ""
+  umbrella_white_sunny_doll:
+    enable: true
+    displayName: "&f晴天娃娃&f白雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 480
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   把精心制作一只晴天娃娃挂在伞角吧"
+      - ""
+  umbrella_yellow_sunny_doll:
+    enable: true
+    displayName: "&f晴天娃娃&e黄雨伞"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 10
+    attackSpeed: -0.8
+    durability:
+      enable: true
+      value: 480
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   把精心制作一只晴天娃娃挂在伞角吧"
+      - ""
+  zephyr_fan_1:
+    enable: true
+    displayName: "&c樱花於扇"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 6
+    attackSpeed: 0
+    durability:
+      enable: true
+      value: 687
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   它活在传说中，无法轻易得到"
+      - ""
+  zephyr_fan_2:
+    enable: true
+    displayName: "&b枫鳕於扇"
+    lore:
+      - "@optifine"
+      - "@attribute_tag"
+      - "@attribute_damage"
+      - "@attribute_attackSpeed"
+      - ""
+      - "&f   &7&L[&6&l 耐久值 &7&l]"
+      - "@durability_tag@durability_info"
+      - "&f                                        "
+    attackDamage: 6
+    attackSpeed: 0
+    durability:
+      enable: true
+      value: 687
+    wiki:
+      - "&f   &7&L[&3&l 维基 &7&l]"
+      - ""
+      - "&f   它活在传说中，无法轻易得到"
+      - ""
