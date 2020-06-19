@@ -6,6 +6,7 @@ import cn.mcres.iNewReflex.api.item.FoodBuild;
 import cn.mcres.iNewReflex.expansion.item.food.FoodItem;
 import cn.mcres.iNewReflex.load.checkPlugin.BlockStoreLib;
 import cn.mcres.iNewReflex.utils.LoreReplace;
+import cn.mcres.iNewReflex.utils.ReturnMaterial;
 import com.gmail.filoghost.holographicdisplays.api.HologramsAPI;
 import com.gmail.filoghost.holographicdisplays.api.VisibilityManager;
 import java.util.ArrayList;
@@ -16,7 +17,9 @@ import net.sothatsit.blockstore.BlockStoreApi;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.block.Skull;
+import org.bukkit.block.data.Directional;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -170,5 +173,53 @@ public class CropManager {
                 CropData.saveData();
             }
         }.runTaskTimer(getMain(), 0, CropData.cropSaveTime);
+    }
+
+    /**
+     * 放置农作物
+     * @param block
+     * @param blockFace
+     */
+    public static void setCropBlock(Block block, BlockFace blockFace) {
+        // PLAYER_HEAD 放置在地上
+        // PLAYER_WALL_HEAD 放置在墙壁
+        // 不可放置于一个块的下面
+        if (blockFace.equals(BlockFace.UP)) {
+            block.setType(ReturnMaterial.getMaterial("PLAYER_HEAD"));
+        }else {
+            block.setType(ReturnMaterial.getMaterial("PLAYER_WALL_HEAD"));
+            if (block.getBlockData() instanceof Directional) {
+                Directional dir = (Directional) block.getBlockData();
+                if (blockFace.equals(BlockFace.DOWN)) {
+                    hasAndSetBlockFace(block, dir);
+                }else {
+                    dir.setFacing(blockFace);
+                }
+                block.setBlockData(dir);
+            }
+        }
+    }
+
+    public static void hasAndSetBlockFace(Block block, Directional dir) {
+        final BlockFace[] blockFaces = new BlockFace[]{
+                BlockFace.EAST, BlockFace.WEST,
+                BlockFace.SOUTH, BlockFace.NORTH};
+        for (BlockFace blockFace : blockFaces) {
+            Material material = block.getRelative(blockFace).getType();
+            if (!material.equals(Material.AIR)
+                    && !material.equals(ReturnMaterial.getMaterial("PLAYER_HEAD"))
+                    && !material.equals(ReturnMaterial.getMaterial("PLAYER_WALL_HEAD"))) {
+                if (blockFace.equals(BlockFace.EAST)) {
+                    dir.setFacing(BlockFace.WEST);
+                }else if (blockFace.equals(BlockFace.WEST)) {
+                    dir.setFacing(BlockFace.EAST);
+                }else if (blockFace.equals(BlockFace.NORTH)) {
+                    dir.setFacing(BlockFace.SOUTH);
+                }else if (blockFace.equals(BlockFace.SOUTH)) {
+                    dir.setFacing(BlockFace.NORTH);
+                }
+                return;
+            }
+        }
     }
 }

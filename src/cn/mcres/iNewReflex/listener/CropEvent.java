@@ -19,6 +19,10 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+import org.bukkit.block.BlockState;
+import org.bukkit.block.Skull;
+import org.bukkit.block.data.BlockData;
+import org.bukkit.block.data.Directional;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -122,7 +126,7 @@ public class CropEvent implements Listener {
         Bukkit.getPluginManager().callEvent(blockPlaceEvent);
         if (!blockPlaceEvent.canBuild() || blockPlaceEvent.isCancelled()) return;
 
-        newBlock.setType(/*ReturnMaterial.skullItem()*/ReturnMaterial.getMaterial("PLAYER_HEAD"));
+        CropManager.setCropBlock(newBlock, blockFace);
 
         NBTEditor.setSkullTexture(newBlock, foodBuild.getCropUrl());
 
@@ -131,7 +135,6 @@ public class CropEvent implements Listener {
         CropManager.saveDataAll(newBlock, foodBuild.getItemId(), String.valueOf(cropUUID), 0);
 
         PlaceUtil.takeItem(player, itemStack);
-//        itemStack.setAmount(itemStack.getAmount()-1);
     }
 
     private static boolean canPlace(List<Material> materials, Material blockType) {
