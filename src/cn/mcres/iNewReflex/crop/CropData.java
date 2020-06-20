@@ -71,11 +71,12 @@ public class CropData {
 
     public static void saveData() {
         FileConfiguration cropData = CreateCropDataYaml.cropDataYaml;
-        if (!cropData.contains("crops")) return;
-        for (String cropUUIDString : cropData.getConfigurationSection("crops").getKeys(false)) {
-            Location loc = getSkullLoc(cropData, cropUUIDString);
-            if (!(loc.getBlock().getState() instanceof Skull) || !CropManager.hasData(loc.getBlock()) ) {
-                delData(cropData, cropUUIDString);
+        if (cropData.contains("crops")) {
+            for (String cropUUIDString : cropData.getConfigurationSection("crops").getKeys(false)) {
+                Location loc = getSkullLoc(cropData, cropUUIDString);
+                if (!(loc.getBlock().getState() instanceof Skull) || !CropManager.hasData(loc.getBlock())) {
+                    delData(cropData, cropUUIDString);
+                }
             }
         }
         for (UUID cropUUID : cropDataList) {

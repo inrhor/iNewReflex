@@ -147,8 +147,7 @@ public class CropEvent implements Listener {
     }
 
     private static boolean isCanPlaceFace(BlockFace blockFace, String face) {
-        String newFace = face.toUpperCase();
-        switch (newFace) {
+        switch (face) {
             case "ALL":
                 return true;
             case "NORTH":

@@ -69,7 +69,7 @@ public class FoodBuild {
         this.cropRewards = this.yaml.getStringList(type+"."+itemId+".crop.rewards");
         this.cropMaterialList = ReturnMaterial.getMaterial(this.yaml.getStringList(type+"."+itemId+".crop.material"));
         this.cropUrl = this.yaml.getString(type+"."+itemId+".crop.headUrl");;
-        this.cropFace = this.yaml.getString(type+"."+itemId+".crop.face");
+        this.cropFace = this.yaml.getString(type+"."+itemId+".crop.face").toUpperCase();
         this.growthRipe = this.yaml.getInt(type+"."+itemId+".crop.growthRipe");
         this.harvestMaxValue = this.yaml.getInt(type+"."+itemId+".crop.harvest.maxValue");
 

@@ -10,6 +10,7 @@ import cn.mcres.iNewReflex.utils.ReturnMaterial;
 import com.gmail.filoghost.holographicdisplays.api.HologramsAPI;
 import com.gmail.filoghost.holographicdisplays.api.VisibilityManager;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 import me.arasple.mc.trhologram.hologram.Hologram;
@@ -72,6 +73,13 @@ public class CropManager {
         }
     }
 
+    /**
+     * 采集
+     * @param foodBuild
+     * @param loc
+     * @param player
+     * @param block
+     */
     public static void cropHarvest(FoodBuild foodBuild, Location loc, Player player, Block block) {
         UUID cropUUID = CropManager.getCropUUID(block);
         Location newLoc = loc.add(foodBuild.getCropShowX(), foodBuild.getCropShowY(), foodBuild.getCropShowZ());
@@ -81,8 +89,7 @@ public class CropManager {
         if (nowHarvest < maxHarvest) {
             CropData.cropHarvest.put(cropUUID, CropData.cropHarvest.get(cropUUID)+1);
         }else {
-            block.setType(Material.AIR);
-            CropData.removeMap(cropUUID);
+            removeCrop(block, cropUUID);
             int nowGrowth = getGrowthValue(block);
             int maxGrowth = foodBuild.getGrowthRipe();
             if (nowGrowth >= maxGrowth) {
@@ -97,6 +104,15 @@ public class CropManager {
         senHD(foodBuild, loc, player, newLoc, showTime, newTextList);
     }
 
+    /**
+     * 农作物信息
+     * @param foodBuild
+     * @param loc
+     * @param player
+     * @param newLoc
+     * @param showTime
+     * @param newTextList
+     */
     private static void senHD(FoodBuild foodBuild, Location loc, Player player, Location newLoc, int showTime, List<String> newTextList) {
         if (foodBuild.getCropShowUse().equals("hd")) {
             com.gmail.filoghost.holographicdisplays.api.Hologram hdHologram = HologramsAPI.createHologram(getMain(), newLoc);
@@ -126,6 +142,13 @@ public class CropManager {
         }
     }
 
+    /**
+     * 农作物信息
+     * @param foodBuild
+     * @param loc
+     * @param player
+     * @param block
+     */
     public static void cropShow(FoodBuild foodBuild, Location loc, Player player, Block block) {
         Location newLoc = loc.add(foodBuild.getCropShowX(), foodBuild.getCropShowY(), foodBuild.getCropShowZ());
         int nowGrowth = getGrowthValue(block);
@@ -154,12 +177,23 @@ public class CropManager {
         new BukkitRunnable() {
             @Override
             public void run() {
-                for (UUID cropUUID : CropData.cropDataList) {
+                Iterator<UUID> iterator = CropData.cropDataList.iterator();
+                while (iterator.hasNext()) {
+                    UUID cropUUID = iterator.next();
                     Location loc = CropData.cropDataMap.get(cropUUID);
-                    if (!(loc.getBlock().getState() instanceof Skull)) continue;
                     Block crop = loc.getBlock();
+                    if (!(crop.getState() instanceof Skull)) {
+                        removeCrop(crop, cropUUID);
+                        continue;
+                    }
                     String itemId = CropManager.getCropId(crop);
                     FoodBuild foodBuild = FoodItem.foodItemList.get(itemId);
+                    if (!checkHasDadBlock(foodBuild, crop)) {
+                        crop.setType(Material.AIR);
+                        CropData.cropDataMap.remove(cropUUID);
+                        iterator.remove();
+                        break;
+                    }
                     if (!CropManager.hasData(crop)) continue;
                     if (CropManager.getGrowthValue(crop) < foodBuild.getGrowthRipe()) {
                         CropManager.addGrowthValue(crop, foodBuild.getCropGrowthAddValue());
@@ -169,10 +203,61 @@ public class CropManager {
         }.runTaskTimer(getMain(), 0, CropData.cropTime);
 
         new BukkitRunnable() {
+            @Override
             public void run() {
                 CropData.saveData();
             }
         }.runTaskTimer(getMain(), 0, CropData.cropSaveTime);
+    }
+
+    /**
+     * 检查农作物的系块
+     * @param foodBuild
+     * @param block
+     */
+    public static boolean checkHasDadBlock(FoodBuild foodBuild, Block block) {
+        String cropFace = foodBuild.getCropFace();
+        List<Material> materialList = foodBuild.getCropMaterialList();
+        // NORTH EAST SOUTH WEST UP DOWN ALL
+        UUID cropUUID = CropManager.getCropUUID(block);
+        switch (cropFace) {
+            case "ALL":
+                if (!hasDadBlock(block, materialList)) {
+                    return false;
+                }
+                break;
+            case "NORTH":
+                if (!equalsMaterial(block.getRelative(BlockFace.SOUTH).getType(), materialList)) {
+                    return false;
+                }
+                break;
+            case "EAST":
+                if (!equalsMaterial(block.getRelative(BlockFace.WEST).getType(), materialList)) {
+                    return false;
+                }
+                break;
+            case "SOUTH":
+                if (!equalsMaterial(block.getRelative(BlockFace.NORTH).getType(), materialList)) {
+                    return false;
+                }
+                break;
+            case "WEST":
+                if (!equalsMaterial(block.getRelative(BlockFace.EAST).getType(), materialList)) {
+                    return false;
+                }
+                break;
+            case "UP":
+                if (!equalsMaterial(block.getRelative(BlockFace.DOWN).getType(), materialList)) {
+                    return false;
+                }
+                break;
+            case "DOWN":
+                if (!equalsMaterial(block.getRelative(BlockFace.UP).getType(), materialList)) {
+                    return false;
+                }
+                break;
+        }
+        return true;
     }
 
     /**
@@ -200,7 +285,8 @@ public class CropManager {
         }
     }
 
-    public static void hasAndSetBlockFace(Block block, Directional dir) {
+    // 为了让PLAYER_WALL_HEAD附在某块的面
+    private static void hasAndSetBlockFace(Block block, Directional dir) {
         final BlockFace[] blockFaces = new BlockFace[]{
                 BlockFace.EAST, BlockFace.WEST,
                 BlockFace.SOUTH, BlockFace.NORTH};
@@ -221,5 +307,28 @@ public class CropManager {
                 return;
             }
         }
+    }
+
+    private static boolean hasDadBlock(Block block, List<Material> materialList) {
+        final BlockFace[] blockFaces = new BlockFace[]{
+                BlockFace.EAST, BlockFace.WEST,
+                BlockFace.SOUTH, BlockFace.NORTH,
+                BlockFace.DOWN, BlockFace.UP};
+        for (BlockFace blockFace : blockFaces) {
+            if (equalsMaterial(block.getRelative(blockFace).getType(), materialList)) return true;
+        }
+        return false;
+    }
+
+    private static boolean equalsMaterial(Material material, List<Material> materialList) {
+        for (Material type : materialList) {
+            if (material.equals(type)) return true;
+        }
+        return false;
+    }
+
+    private static void removeCrop(Block block, UUID cropUUID) {
+        block.setType(Material.AIR);
+        CropData.removeMap(cropUUID);
     }
 }
