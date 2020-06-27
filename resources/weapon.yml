@@ -36,6 +36,20 @@ weapon:
       - ""
       - "&f   只要绿宝石和钻石剑就可以合成它"
       - ""
+    # 关于农作物系统机制
+    crop:
+      # 收割农作物
+      harvest:
+        # 是否启用
+        enable: false
+        # 采集速度，在基础上新增的数字
+        add: 1
+        # 采集的代价
+        # 无则可以不填 或者 填为 cost: []
+        # 代价可以有以下
+        #   itemDurability:消耗耐久性值:概率   在耐久性启用时，收割一下消耗多少耐久性，概率可填0~1之间数字
+        cost:
+          - "itemDurability:1:0.5"
   obsidian_sword:
     enable: true
     displayName: "&7黑曜之剑"

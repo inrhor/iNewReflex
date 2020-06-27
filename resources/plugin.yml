@@ -1,6 +1,6 @@
 name: iNewReflex
 main: cn.mcres.iNewReflex.INewReflex
-version: "1.5.3"
+version: "1.6.3"
 api-version: "1.13"
 authors:
   - inrhor

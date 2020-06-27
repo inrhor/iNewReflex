@@ -38,6 +38,9 @@ public class ItemBuild {
     private boolean canBreakCustomBlock;
     private boolean canAddBreakVanillaBlock;
     private int breakVanillaValue;
+    private boolean cropHarvestEnable;
+    private int cropHarvestAdd;
+    private List<String> cropHarvestCost;
 
     public ItemBuild(FileConfiguration yaml, String itemId, Material material, int customModelData, String optifine, String type) {
         this.yaml = yaml;
@@ -78,6 +81,17 @@ public class ItemBuild {
         this.canAddBreakVanillaBlock = this.yaml.getBoolean(type+"."+itemId+".breakBlock.vanillaBlock.enable");
         if (this.canAddBreakVanillaBlock) {
             this.breakVanillaValue = this.yaml.getInt(type+"."+itemId+".breakBlock.vanillaBlock.value");
+        }
+
+        this.cropHarvestEnable = this.yaml.getBoolean(type+"."+itemId+".crop.harvest.enable");
+        if (this.cropHarvestEnable) {
+            this.cropHarvestAdd = this.yaml.getInt(type+"."+itemId+".crop.harvest.add");
+            String cost = type+"."+itemId+".crop.harvest.cost";
+            if (this.yaml.contains(cost)) {
+                this.cropHarvestCost = this.yaml.getStringList(cost);
+            }else {
+                this.cropHarvestCost = new ArrayList<>();
+            }
         }
 
         this.material = material;
@@ -128,6 +142,10 @@ public class ItemBuild {
 
         if (this.canAddBreakVanillaBlock) {
             itemStack = Nbt.addItemMetadata(itemStack, "iNewReflex_item_vanillaBlock_canAdd", this.breakVanillaValue);
+        }
+
+        if (this.cropHarvestEnable) {
+            itemStack = Nbt.addItemMetadata(itemStack, "iNewReflex_item_cropHarvest_Add", this.cropHarvestAdd);
         }
 
         this.itemStack = itemStack;
@@ -204,5 +222,9 @@ public class ItemBuild {
 
     public List<String> getWiki() {
         return wiki;
+    }
+
+    public int getCropHarvestAdd() {
+        return cropHarvestAdd;
     }
 }

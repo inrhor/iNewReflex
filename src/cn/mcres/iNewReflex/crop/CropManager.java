@@ -6,6 +6,7 @@ import cn.mcres.iNewReflex.api.item.FoodBuild;
 import cn.mcres.iNewReflex.expansion.item.food.FoodItem;
 import cn.mcres.iNewReflex.load.checkPlugin.BlockStoreLib;
 import cn.mcres.iNewReflex.utils.LoreReplace;
+import cn.mcres.iNewReflex.utils.Nbt;
 import cn.mcres.iNewReflex.utils.ReturnMaterial;
 import com.gmail.filoghost.holographicdisplays.api.HologramsAPI;
 import com.gmail.filoghost.holographicdisplays.api.VisibilityManager;
@@ -22,6 +23,7 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.block.Skull;
 import org.bukkit.block.data.Directional;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class CropManager {
@@ -87,7 +89,20 @@ public class CropManager {
         int nowHarvest = CropData.cropHarvest.get(cropUUID);
         int maxHarvest = foodBuild.getHarvestMaxValue();
         if (nowHarvest < maxHarvest) {
-            CropData.cropHarvest.put(cropUUID, CropData.cropHarvest.get(cropUUID)+1);
+            if (!player.getInventory().getItemInMainHand().getType().equals(Material.AIR)) {
+                ItemStack handItem = player.getInventory().getItemInMainHand();
+                String cropHarvestTag = "iNewReflex_item_cropHarvest_Add";
+                if (handItem.hasItemMeta()
+                        && Nbt.hasItemMetadataInt(handItem, cropHarvestTag)) {
+                    /* 消耗耐久性代码待写 */
+                    // code... //
+                    cropHarvestUpdate(cropUUID, Nbt.getItemMetadataInt(handItem, cropHarvestTag));
+                }else {
+                    cropHarvestUpdate(cropUUID, 1);
+                }
+            }else {
+                cropHarvestUpdate(cropUUID, 1);
+            }
         }else {
             removeCrop(block, cropUUID);
             int nowGrowth = getGrowthValue(block);
@@ -102,6 +117,15 @@ public class CropManager {
         int showTime = foodBuild.getCropShowTime();
         List<String> newTextList = LoreReplace.loreHarvest(CropData.harvest, nowHarvest, maxHarvest);
         senHD(foodBuild, loc, player, newLoc, showTime, newTextList);
+    }
+
+    /**
+     * 更新农作物收割采集进度信息
+     * @param cropUUID
+     * @param value
+     */
+    private static void cropHarvestUpdate(UUID cropUUID, int value) {
+        CropData.cropHarvest.put(cropUUID, CropData.cropHarvest.get(cropUUID)+value);
     }
 
     /**

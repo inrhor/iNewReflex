@@ -35,8 +35,6 @@ public class BreakBlock implements Listener {
     private static HashMap<Player, Integer> breakBlockStage = new LinkedHashMap<>();
     // 块被破坏时存入位置
     private static HashMap<Player, Location> breakBlockLocation = new LinkedHashMap<>();
-    // 物品附加破坏块力量
-//    private static HashMap<Player, Location> addBreakBlockStrength = new LinkedHashMap<>();
 
     @EventHandler
     public void onPlayerAnimation(PlayerAnimationEvent event) {

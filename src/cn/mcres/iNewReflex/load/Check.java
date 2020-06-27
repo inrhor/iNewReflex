@@ -6,7 +6,7 @@ class Check {
     static void start() {
         LogUtil.send("&r┍ §a正在加载 §fiNewReflex §a插件");
         LogUtil.send("&r┝ §r欢迎使用");
-        LogUtil.send("&r┝ §r插件当前版本：§r1.6.0");
+        LogUtil.send("&r┝ §r插件当前版本：§r1.6.3");
         LogUtil.send("&r┝ §e正在检查");
     }
 
