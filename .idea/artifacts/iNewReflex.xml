@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="iNewReflex">
+    <output-path>E:/Server1152/plugins</output-path>
+    <root id="archive" name="iNewReflex.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/resources/blocks.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/cropData.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/food.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/gui.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/lang.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/material.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/mobsBook.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/panel.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/recipe.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/tool.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/weapon.yml" />
+      <element id="module-output" name="iNewReflex" />
+    </root>
+  </artifact>
+</component>
